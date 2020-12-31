@@ -26,6 +26,7 @@ namespace Helpers
                     src => src.DateOfBirth.CalculateAge()
                 ));
             CreateMap<DbPhoto, PhotoForDetailedDto>();
+            CreateMap<UserForUpdateDto, DbUser>();
         }
     }
 }

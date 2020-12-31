@@ -91,7 +91,7 @@ namespace DatingApp.API.Migrations
                     b.Property<DateTime>("LastActive")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("LokkingFor")
+                    b.Property<string>("LookingFor")
                         .HasColumnType("TEXT");
 
                     b.Property<byte[]>("PasswordHash")

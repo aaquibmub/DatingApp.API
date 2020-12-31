@@ -65,7 +65,7 @@ namespace DatingApp.API.Migrations
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<string>(
-                name: "LokkingFor",
+                name: "LookingFor",
                 table: "DbUsers",
                 type: "TEXT",
                 nullable: true);
@@ -141,7 +141,7 @@ namespace DatingApp.API.Migrations
                 table: "DbUsers");
 
             migrationBuilder.DropColumn(
-                name: "LokkingFor",
+                name: "LookingFor",
                 table: "DbUsers");
         }
     }
