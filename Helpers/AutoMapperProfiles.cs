@@ -30,6 +30,7 @@ namespace Helpers
 
             CreateMap<DbPhoto, PhotoForReturnDto>();
             CreateMap<PhotoForCreationDto, DbPhoto>();
+            CreateMap<UserForRegisterDto, DbUser>();
         }
     }
 }
