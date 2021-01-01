@@ -1,17 +1,16 @@
 using System;
 
-namespace Models
+namespace Dtos
 {
-    public class DbPhoto
+    public class PhotoForReturnDto
     {
         public int Id { get; set; }
         public string Url { get; set; }
         public string Description { get; set; }
         public DateTime DatedAdded { get; set; }
         public bool IsMain { get; set; }
+
         public string PublicId { get; set; }
-        public DbUser User { get; set; }
-        public int UserId { get; set; }
 
     }
 }

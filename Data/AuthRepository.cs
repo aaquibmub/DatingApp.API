@@ -17,7 +17,7 @@ namespace Data
         }
         public async Task<DbUser> Login(string username, string password)
         {
-            var user = await _context.DbUsers.FirstOrDefaultAsync(f => f.UserName == username);
+            var user = await _context.DbUsers.Include(inc => inc.Photos).FirstOrDefaultAsync(f => f.UserName == username);
 
             if (user == null)
                 return null;

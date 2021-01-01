@@ -27,6 +27,9 @@ namespace Helpers
                 ));
             CreateMap<DbPhoto, PhotoForDetailedDto>();
             CreateMap<UserForUpdateDto, DbUser>();
+
+            CreateMap<DbPhoto, PhotoForReturnDto>();
+            CreateMap<PhotoForCreationDto, DbPhoto>();
         }
     }
 }

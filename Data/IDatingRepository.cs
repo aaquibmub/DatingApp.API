@@ -11,6 +11,8 @@ namespace Data
         Task<bool> SaveAll();
         Task<IEnumerable<DbUser>> GetUsers();
         Task<DbUser> GetUser(int id);
+        Task<DbPhoto> GetPhoto(int id);
+        Task<DbPhoto> GetMainPhotoForUser(int userId);
 
     }
 }
