@@ -15,6 +15,9 @@ namespace Data
         Task<DbPhoto> GetPhoto(int id);
         Task<DbPhoto> GetMainPhotoForUser(int userId);
         Task<DbLike> GetLike(int userId, int recipientId);
+        Task<DbMessage> GetMessage(int id);
+        Task<PagedList<DbMessage>> GetMessagesForUser(MessageParams messageParams);
+        Task<IEnumerable<DbMessage>> GetMessageThread(int userId, int recipientId);
 
     }
 }

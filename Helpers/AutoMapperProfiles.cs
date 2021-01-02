@@ -31,6 +31,12 @@ namespace Helpers
             CreateMap<DbPhoto, PhotoForReturnDto>();
             CreateMap<PhotoForCreationDto, DbPhoto>();
             CreateMap<UserForRegisterDto, DbUser>();
+            CreateMap<MessageForCreationDto, DbMessage>().ReverseMap();
+            CreateMap<DbMessage, MessageToReturnDto>()
+                .ForMember(m => m.SenderPhotoUrl, opt => opt
+                    .MapFrom(u => u.Sender.Photos.FirstOrDefault(p => p.IsMain).Url))
+                .ForMember(m => m.RecipientPhotoUrl, opt => opt
+                    .MapFrom(u => u.Recipient.Photos.FirstOrDefault(p => p.IsMain).Url));
         }
     }
 }

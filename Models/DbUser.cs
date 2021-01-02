@@ -24,5 +24,7 @@ namespace Models
         public ICollection<DbPhoto> Photos { get; set; }
         public ICollection<DbLike> Likers { get; set; }
         public ICollection<DbLike> Likees { get; set; }
+        public ICollection<DbMessage> MessagesSent { get; set; }
+        public ICollection<DbMessage> MessagesReceived { get; set; }
     }
 }
