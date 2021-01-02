@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Helpers;
 using Models;
 
 namespace Data
@@ -9,7 +10,7 @@ namespace Data
         void Add<T>(T entity) where T : class;
         void Delete<T>(T entity) where T : class;
         Task<bool> SaveAll();
-        Task<IEnumerable<DbUser>> GetUsers();
+        Task<PagedList<DbUser>> GetUsers(UserParams userParams);
         Task<DbUser> GetUser(int id);
         Task<DbPhoto> GetPhoto(int id);
         Task<DbPhoto> GetMainPhotoForUser(int userId);
