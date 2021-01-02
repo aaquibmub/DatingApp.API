@@ -22,5 +22,7 @@ namespace Models
         public string City { get; set; }
         public string Country { get; set; }
         public ICollection<DbPhoto> Photos { get; set; }
+        public ICollection<DbLike> Likers { get; set; }
+        public ICollection<DbLike> Likees { get; set; }
     }
 }

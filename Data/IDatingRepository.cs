@@ -14,6 +14,7 @@ namespace Data
         Task<DbUser> GetUser(int id);
         Task<DbPhoto> GetPhoto(int id);
         Task<DbPhoto> GetMainPhotoForUser(int userId);
+        Task<DbLike> GetLike(int userId, int recipientId);
 
     }
 }
